@@ -1,0 +1,13 @@
+<%- include ("partials/header") -%>
+
+<h1>HOME</h1>
+<p><%= homeCnt %></p>
+
+<% postArHome.forEach(function(title){ %>
+  <h2> <%= title.newTitle %> </h2>
+  <p> <%= title.newPost.substring(0,80) + "..."%> </p>
+  <a class="btn btn-sm btn-primary" href="/posts/<%= title.newTitle%>"  data-toggle="button">Read More</a>
+
+ <% }) %>
+
+<%- include ("partials/footer") -%>
